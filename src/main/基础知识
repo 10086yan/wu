@@ -1,0 +1,57 @@
+1.GitHub
+--创建远程库
+--代码推送:push
+--代码拉取:pull
+--代码克隆:clone
+2.SSH免密登录
+3.git版本控制
+--个人开发到团队协作让git版本控制工具进行实现
+--集中式版本控制工具--已经被大部分公司所淘汰--原理是几个程序员把不同的代码提交到中央服务器
+--分布式版本控制工具:主流的Git、Mercurial、Bazaar、Darcs,主要传送到GitHub这样的远程库中，保证远程库的版本永远是最新的
+4.git的工作机制
+--本地库->历史版本
+--暂存区->临时储存
+--工作区->写代码（并不是开发工具，而是代码的包所在的磁盘的位置）
+--工作区--使用git add命令把代码储存在暂存区中-->储存区-->使用git commit--把代码提交到本地库或者用git push推送到远程库，代码只能更新但是不容易进行修改
+5.git的常用命令
+--git init:初始化本地库
+--git status:查看本地库状态
+--git add 文件名:添加到暂存区
+--git commit -m "日志信息" 文件名:提交到本地库
+--git reflog:查看历史记录 //a7d06e7:精简版本号  a7d06e7bb07e244ca8f9d5254cfc50e345c80e90:完整的版本号
+--git reset --hard 版本号 :版本穿梭
+--git config --global user.name :设置用户签名
+--git config --global user.email:设置用户邮件
+--修改文件:重复的进行添加到栈存区和事务提交的操作，即可完成文件版本的一个修改
+--版本穿梭:git --hard需要穿梭回去的版本号
+6.git的分支操作
+--分支的好处:同时并行多个功能开发，提高开发的效率
+--分支的操作
+--git branch 分支名 :创建分支
+--git branch -v:查看分支
+--git checkout 分支名:切换分支
+--git merge 分支名:把指定的分支合并到当前分支上
+--冲突合并
+<！-- git merge hot-fix
+Auto-merging hello.txt
+CONFLICT (content): Merge conflict in hello.txt
+Automatic merge failed; fix conflicts and then commit the result.
+！-->
+7.团队协作
+8.GitHub操作
+--网址:https://github.com/
+--创建远程仓库
+--创建远程仓库别名
+--基本语法:git remote -v:查看当前所有远程地址别名
+--git remote add 别名 远程地址
+-- https://github.com/10086yan/git-demo.git (fetch):拉取
+-- https://github.com/10086yan/git-demo.git (push):推送
+--推送
+--git push 别名 分支
+--拉取
+--git pull 别名 分支
+--克隆
+--git clone 远程库的地址
+9.GitHub的SSH免密登录
+--在用户一栏里启动git输入ssh -keygen -t rsa -C 3328955912@qq.com
+10.
